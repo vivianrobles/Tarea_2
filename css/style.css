@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;0,900;1,200;1,900&family=Permanent+Marker&family=Raleway:ital,wght@0,100;0,500;1,100;1,500&display=swap');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Raleway', sans-serif;
+*/
+
+
+/* 
+CODIGO CSS COMENTADO
+PALETA DE COLORES
+Rojo Claro : #DF1F2D
+Rojo Oscuro: #B11313
+Negro : #110e0e
+*/
+
+
+/* CLASES GLOBALES */
+
+.bg-color-red-clear {
+    background-color: #DF1F2D;
+}
+
+.bg-color-red-dark {
+    background-color: #B11313;
+    color: #fff;
+}
+
+.bg-color-black {
+    background-color: #110e0e;
+    color: #fff;
+}
+
+.parallax {
+    /* The image used */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(43, 55, 132, .5)), url("../rbd\ 3.jpg");
+    /* Full height */
+    height: 85vh;
+    /*vh = 70 viewport height - vw = viewport width*/
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: 100% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: alternate expansion 2.5s infinite;
+}
+
+
+/* Personalizaciones */
+
+
+/* Google fonts most used:
+    Raleway, Roboto, Open Sans, Oswald, Montserrat
+*/
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Permanent Marker';
+    font-size: 1.8rem;
+    padding: 20px 0px;
+    transition: all .5s;
+}
+
+h1 {
+    animation: alternate expansion-h1 2s infinite;
+}
+
+h1,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+nav ul li {
+    padding: 20px 10px;
+    transition: all 500ms;
+}
+
+nav ul li:hover {
+    background-color:rgb(236, 178, 178); 
+}
+
+section {
+    padding: 40px 60px;
+    text-align: center;
+}
+
+section .row {
+    padding: 15px 30px;
+}
+
+section h2,
+section button {
+    font-family: Raleway;
+    font-weight: 900;
+    font-size: 2.2rem;
+}
+
+section h3,
+section p,
+section label,
+input,
+textarea,
+footer {
+    font-family: Montserrat;
+    font-weight: 200;
+}
+
+
+/* APLICANDO FLEXBOX */
+
+section#who-am-i div.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* FIN APLICANDO FLEXBOX */
+
+section#who-am-i h3,
+section#who-am-i h2 {
+    text-align: center;
+}
+
+section#who-am-i div.row p {
+    padding: 10px 40px;
+    width: 50%;
+    text-align: justify;
+}
+
+section#who-am-i img {
+    border-radius: 50%;
+}
+
+/* SECCION CHARACTERISTICS
+PSEUDO CLASES*/
+
+section#characteristics {
+    height: 85%;
+    color: #fff;
+}
+
+section#characteristics {
+    text-align: center;
+ 
+}
+
+section#characteristics div.row:nth-child(1) {
+    text-align: center;
+}
+
+section#characteristics div.row:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section#characteristics div.row:nth-child(2) article:nth-child(odd) {
+    background-color: #B11313;
+}
+
+section#characteristics div.row:nth-child(2) article:nth-child(even) {
+    background-color: #B11313;
+}
+
+section#characteristics div.row article {
+    width: 25%;
+    height: 200px;
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: all 300ms;
+}
+
+section#characteristics div.row article:hover {
+    transform: scale3d(1.2, 1.2, 1.2) rotateY( 360deg) translateZ(50px);
+}
+
+section#characteristics div.row article h2 {
+    font-size: 1.5rem;
+}
+
+
+/* SECCION GALLERY*/
+
+section#Gallery img {
+    transition: all 300ms;
+    width: 400px;
+}
+
+section#Gallery img:hover {
+    transform: scale3d(1.5, 1.5, 1.5) rotateY( 180deg) translateY(30px);
+}
+
+
+/* SECCION RBD Pages*/
+
+section#RBD-Pages {
+    height: 85%;
+}
+
+section#RBD-Pages div.row:nth-child(1) {
+    text-align: center;
+    color: #fff;
+}
+
+section#RBD-Pages label {
+    color: #fff;
+}
+
+section#RBD-Pages form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#RBD-Pages form * {
+    background: transparent;
+    color: #fff;
+}
+
+section#RBD-Pages form input,
+section#RBD-Pages form textarea {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+section#RBD-Pages form button {
+    cursor: pointer;
+    border: none;
+    background-color: #B11313;
+    padding: 15px 30px;
+    transition: all 300ms;
+    font-size: 1.15rem;
+    /* font-weight: 200; */
+}
+
+section#RBD-Pages form button:hover {
+    background: #DF1F2D;
+}
+
+
+/* SECCION FOOTER*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    background: #DF1F2D;
+    padding: 8px 0;
+}
+
+footer div.row {
+    padding: 12px 0px;
+}
+
+footer div.row a,
+footer div.row p {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer div.row a {
+    transition: all 300ms;
+}
+
+footer div.row a:hover {
+    font-size: 120%;
+}
+
+
+/* BOTON FLOTANTE */
+
+a#btn-floating {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    background: #B11313;
+    color: #fff;
+    padding: 10px 15px;
+    transition: all 300ms;
+}
+
+a#btn-floating:hover {
+    background: #fff;
+    color: #B11313;
+    transform: scale(1.3);
+}
+
+
+/* ANIMACIONES*/
+
+@keyframes expansion {
+    from {
+        background-position-y: 35%;
+    }
+    to {
+        background-position-y: 45%;
+    }
+}
+
+@keyframes expansion-h1 {
+    from {
+        font-size: 2em;
+    }
+    to {
+        font-size: 5rem;
+    }
+}
+
